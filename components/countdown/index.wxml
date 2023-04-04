@@ -1,0 +1,15 @@
+<view wx:if="{{ date }}" class="count-down">
+  <!-- <slot wx:if="{{ useSlot }}" /> -->
+  <view class="{{ style }}-style separator-{{ separator }}">
+    <block wx:if="{{ dynamic.day != '00' }}">
+      <text class="dynamic-value">{{ dynamic.day }}</text>
+      <text class="separator">{{ separatorText.day }}</text>
+    </block>
+    <text class="dynamic-value">{{ dynamic.hou }}</text>
+    <text class="separator">{{ separatorText.hou }}</text>
+    <text class="dynamic-value">{{ dynamic.min }}</text>
+    <text class="separator">{{ separatorText.min }}</text>
+    <text class="dynamic-value">{{ dynamic.sec }}</text>
+    <text class="separator">{{ separatorText.sec }}</text>
+  </view>
+</view>

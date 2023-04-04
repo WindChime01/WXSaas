@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="live-room-list">
+    <scroll-view bindscrolltolower="onPageDown" scroll-y="{{ true }}" style="height: {{ scrollHeight }}px">
+      <view wx:for="{{ list.data }}" wx:key="this" catchtap="onTargetLiveRoomIndex" data-id="{{ item.room_id }}" class="live-room-item live-status__{{ item.live_status }}">
+        <!-- 直播状态 -->
+        <view class="room-head dis-flex flex-y-center">
+          <!-- 直播中 -->
+          <text wx:if="{{ item.live_status == 101 }}" class="live-status_icon iconfont icon-zhibozhong"></text>
+          <!-- 未开播 -->
+          <text wx:if="{{ item.live_status == 102 }}" class="live-status_icon iconfont icon-shijian-s"></text>
+          <!-- 已结束 -->
+          <text wx:if="{{ item.live_status >= 103 }}" class="live-status_icon iconfont icon-shipin"></text>
+          <!-- 状态说明 -->
+          <text class="live-status_text">{{ item.live_status_text_1 }}</text>
+        </view>
+        <!-- 房间名称 -->
+        <view class="room-name onelist-hidden">
+          <text>{{ item.room_name }}</text>
+        </view>
+        <!-- 房间封面 -->
+        <view class="room-cover">
+          <image src="{{ item.share_img }}" mode="aspectFill"></image>
+        </view>
+        <!-- 主播信息 -->
+        <view class="room-anchor dis-flex">
+          <view class="lay-left flex-box dis-flex flex-y-center">
+            <!-- 主播头像 -->
+            <!-- mix: 微信api未提供主播头像, 此处显示封面图 -->
+            <view class="anchor-avatar">
+              <image src="{{ item.share_img }}" mode="aspectFill"></image>
+            </view>
+            <!-- 主播昵称 -->
+            <view class="anchor-name">
+              <text>{{ item.anchor_name }}</text>
+            </view>
+          </view>
+          <view class="lay-right">
+            <text class="live-status_text2">{{ item.live_status_text_2 }}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{ isLastPage }}" class="no-more f-28">亲, 没有更多了</view>
+    </scroll-view>
+  </view>
+  <!-- 没有记录 -->
+  <view class="yoshop-notcont" wx:if="{{ !list.data.length && !isLoading }}">
+    <text class="iconfont icon-wushuju"></text>
+    <text class="cont">亲，暂无直播间哦</text>
+  </view>
+</view>

@@ -1,0 +1,92 @@
+.live-room-item {
+  width: 710rpx;
+  margin: 0 auto 20rpx auto;
+  padding: 25rpx 24rpx;
+  background: #fff;
+  border-radius: 5rpx;
+  box-sizing: border-box;
+  box-shadow: 0 2rpx 4rpx 0 rgba(0, 0, 0, 0.05);
+}
+
+.live-room-item:first-child {
+  margin-top: 20rpx;
+}
+
+.room-head {
+  color: #b6b6b6;
+  line-height: 40rpx;
+}
+
+.room-head .live-status_icon {
+  margin-right: 15rpx;
+  font-size: 34rpx;
+}
+
+.room-head .live-status_text {
+  font-size: 26rpx;
+}
+
+/* 直播中 */
+
+.live-status__101 .room-head {
+  color: #db384b;
+}
+
+.live-status__102 .room-head {
+  color: #db384b;
+}
+
+/* 房间名称 */
+
+.room-name {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}
+
+/* 房间封面图 */
+
+.room-cover {
+  margin-top: 15rpx;
+}
+
+.room-cover image {
+  display: block;
+  width: 100%;
+  height: 371rpx;
+}
+
+/* 主播信息 */
+
+.room-anchor {
+  margin-top: 20rpx;
+}
+
+.room-anchor .anchor-avatar {
+  margin-right: 12rpx;
+}
+
+.room-anchor .anchor-avatar image {
+  display: block;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+}
+
+.anchor-name {
+  font-size: 26rpx;
+}
+
+.live-status_text2 {
+  color: #b6b6b6;
+  font-size: 26rpx;
+}
+
+/* 直播中 */
+
+.live-status__101 .live-status_text2 {
+  color: #db384b;
+}
+
+.live-status__102 .live-status_text2 {
+  color: #db384b;
+}

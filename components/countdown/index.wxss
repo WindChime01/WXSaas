@@ -1,0 +1,33 @@
+.item {
+  display: inline-block;
+  width: 22px;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background-color: #1989fa;
+  border-radius: 2px;
+}
+
+.separator {
+  padding: 0 2rpx;
+}
+
+/* 冒号分隔符 */
+.text-style.separator-colon .separator {
+  padding: 0 5rpx;
+}
+
+
+/* 带背景的样式 */
+.custom-style .dynamic-value {
+  background: #252525;
+  color: #fff;
+  padding: 0 8rpx;
+  line-height: 40rpx;
+  border-radius: 8rpx;
+}
+
+.custom-style .separator {
+  padding: 0 7rpx;
+}

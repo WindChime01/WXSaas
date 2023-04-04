@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "砍价任务",
+  "usingComponents": {
+    "zan-dialog": "/components/dialog/index",
+    "countdown": "/components/countdown/index"
+  }
+}

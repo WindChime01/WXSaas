@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "砍价专区",
+  "usingComponents": {
+    "diy-banner": "/components/diy/banner/banner",
+    "countdown": "/components/countdown/index"
+  }
+}
